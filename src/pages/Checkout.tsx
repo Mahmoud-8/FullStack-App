@@ -1,10 +1,12 @@
 import React from 'react'
+import ProductCard from '../components/ProductCard'
+import PRODUCT from '../productInfo'
 
 type Props = {}
 
-function Checkout({}: Props) {
+const  Checkout = (props:  Props) => {
   return (
-    <div>Checkout</div>
+    <div className=' flex container mt-8'><ProductCard {...PRODUCT} /></div>
   )
 }
 
