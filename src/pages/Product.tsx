@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 type Images = {
@@ -17,7 +16,7 @@ const Product = (props: Props) => {
   const navigate = useNavigate();
 
   const handlePayClick = () => {
-    // Navigate to the checkout page when the "Buy now" button is clicked
+   
     navigate('/checkout');
   };
 
