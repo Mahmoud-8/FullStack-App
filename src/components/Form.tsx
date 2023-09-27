@@ -1,6 +1,7 @@
 
 const VITE_SERVER_Form = import.meta.env.VITE_SERVER_Form;
 import { useState } from 'react';
+import ThankYouMessage from './ThankYouMessage'; 
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
+
+  const [submitted, setSubmitted] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +33,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         console.log('Data sent successfully');
+        setSubmitted(true);
       } else {
         console.error('Error sending data');
       }
@@ -39,6 +43,10 @@ const ContactForm = () => {
   };
 
   return (
+    <div>
+      {submitted ? (
+        <ThankYouMessage /> 
+      ) : (
     <form
       onSubmit={handleSubmit}
       className="flex w-full max-w-sm space-x-3"
@@ -55,9 +63,9 @@ const ContactForm = () => {
                 id="contact-form-name"
                 className="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 placeholder="Name"
-                name="name" // Added missing name attribute
-                value={formData.name} // Added value prop
-                onChange={handleChange} // Added onChange handler
+                name="name" 
+                value={formData.name}
+                onChange={handleChange} 
               />
             </div>
           </div>
@@ -68,9 +76,9 @@ const ContactForm = () => {
                 id="contact-form-email"
                 className="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 placeholder="Email"
-                name="email" // Added missing name attribute
-                value={formData.email} // Added value prop
-                onChange={handleChange} // Added onChange handler
+                name="email" 
+                value={formData.email} 
+                onChange={handleChange} 
               />
             </div>
           </div>
@@ -80,11 +88,11 @@ const ContactForm = () => {
                 className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 id="comment"
                 placeholder="Enter your comment"
-                name="message" // Added missing name attribute
+                name="message" 
                 rows="5"
                 cols="40"
-                value={formData.message} // Added value prop
-                onChange={handleChange} // Added onChange handler
+                value={formData.message} 
+                onChange={handleChange} 
               />
             </label>
           </div>
@@ -99,6 +107,9 @@ const ContactForm = () => {
         </div>
       </div>
     </form>
+          )}
+
+     </div>
   );
 };
 
