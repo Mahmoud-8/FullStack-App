@@ -1,7 +1,7 @@
-# DigitalWeb & Contact Form App
+# DigitalWeb & Contact Form App TypeScript
 
 This is a simple web application for submitting contact information through a form and displaying a thank-you message.
-
+![Alt text](<Screenshot 2023-09-27 at 4.40.07 PM.png>)
 ## Table of Contents
 - [Features](#features)
   - [Prerequisites](#prerequisites)
@@ -17,7 +17,7 @@ This is a simple web application for submitting contact information through a fo
 - Uses MongoDB to store contact data.
 - Utilizes React Router for client-side routing.
 
-
+![Alt text](<Screenshot 2023-09-27 at 4.40.27 PM.png>)
 
 ### Prerequisites
 
@@ -85,3 +85,4 @@ This is a simple web application for submitting contact information through a fo
     - `App.js`: Main React component and routing configuration.
   - `public/`: Static assets and HTML template.
 
+![Alt text](<Screenshot 2023-09-27 at 4.40.36 PM.png>)
