@@ -6,10 +6,12 @@ type Props = {};
 
 const Checkout = (props: Props) => {
   return (
+    <>
     <div className='flex container mt-8'>
       <ProductCard {...PRODUCT} />
-      <ContactForm /> 
     </div>
+          <ContactForm /> 
+          </>
   );
 };
 
