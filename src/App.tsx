@@ -9,17 +9,14 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route
-          path="/"
-          element={
-            <>
+        <Route path="/"  element={
+         
               <Product
                 title="Complete Web Development"
                 description="Learn React with Fullstack Complete Web Development Complete Web Development Complete Web Development Complete Web Development Complete Web Development"
                 images={[{ src: img, alt: 'Thumbnail' }]}
                 price={12.99}
               />
-            </>
           }
         />
         <Route path="checkout" element={<Checkout />} />
