@@ -1,17 +1,9 @@
-import Header from './components/Header';
+// App.js
+import Layout from './components/Layout';
 import Product from './pages/Product';
-import img from './assets/img.avif';
-import { Route, Routes, Outlet } from 'react-router-dom';
+import img from './assets/img.avif'
+import { Route, Routes } from 'react-router-dom';
 import Checkout from './pages/Checkout';
-
-function Layout() {
-  return (
-    <>
-      <Header title="WEBROAD" />
-      <Outlet />
-    </>
-  );
-}
 
 function App() {
   return (
@@ -30,8 +22,8 @@ function App() {
             </>
           }
         />
+        <Route path="checkout" element={<Checkout />} />
       </Route>
-      <Route path="checkout" element={<Checkout />} />
     </Routes>
   );
 }
