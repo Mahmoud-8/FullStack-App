@@ -2,9 +2,9 @@ import ProductCard from '../components/ProductCard';
 import PRODUCT from '../productInfo';
 import ContactForm from '../components/Form';
 
-type Props = {};
 
-const Checkout = (props: Props) => {
+
+const Checkout = () => {
   return (
     <>
     <div className='flex container mt-8'>

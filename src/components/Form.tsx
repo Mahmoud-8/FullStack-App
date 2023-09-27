@@ -13,9 +13,9 @@ const ContactForm = () => {
   });
 
   const [submitted, setSubmitted] = useState(false); 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -23,7 +23,7 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const response = await fetch(`${VITE_SERVER_Form}/api/contact`, {
@@ -93,8 +93,8 @@ const ContactForm = () => {
                 id="comment"
                 placeholder="Enter your comment"
                 name="message" 
-                rows="5"
-                cols="40"
+                rows={parseInt("5")}
+                cols={parseInt("40")}
                 value={formData.message} 
                 onChange={handleChange} 
               />
