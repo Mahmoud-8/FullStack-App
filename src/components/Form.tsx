@@ -1,6 +1,8 @@
 
 const VITE_SERVER_Form = import.meta.env.VITE_SERVER_Form;
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 import ThankYouMessage from './ThankYouMessage'; 
 
 const ContactForm = () => {
@@ -11,6 +13,7 @@ const ContactForm = () => {
   });
 
   const [submitted, setSubmitted] = useState(false); 
+  let navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,6 +37,7 @@ const ContactForm = () => {
       if (response.ok) {
         console.log('Data sent successfully');
         setSubmitted(true);
+        navigate('/thank-you');
       } else {
         console.error('Error sending data');
       }

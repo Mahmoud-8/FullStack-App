@@ -1,5 +1,5 @@
 
-const ThankYouMessage = () => {
+const ThankYouPage = () => {
   return (
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto text-center">
@@ -14,4 +14,4 @@ const ThankYouMessage = () => {
   );
 };
 
-export default ThankYouMessage;
+export default ThankYouPage;

@@ -1,9 +1,9 @@
-// App.js
 import Layout from './components/Layout';
 import Product from './pages/Product';
 import img from './assets/img.avif'
 import { Route, Routes } from 'react-router-dom';
 import Checkout from './pages/Checkout';
+import ThankYouPage from './components/ThankYouMessage'; 
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
           }
         />
         <Route path="checkout" element={<Checkout />} />
+        <Route path="/thank-you" element ={<ThankYouPage />} /> 
       </Route>
     </Routes>
   );
