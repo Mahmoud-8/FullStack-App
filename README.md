@@ -40,7 +40,7 @@ This is a simple web application for submitting contact information through a fo
    ```
 
 3. Install dependencies for the server and client:
-
+<!-- Update to match your folder structure (cannot find a server part here) -->
    ```bash
    cd server
    npm install
@@ -51,6 +51,7 @@ This is a simple web application for submitting contact information through a fo
 4. Configure environment variables:
    - Create a `.env` file in the `server` directory for server-related environment variables (e.g., MongoDB connection URI, server port).
    - Create a `.env.local` file in the `client` directory for client-related environment variables (e.g., API server URL).
+   <!-- Which variables are needed for this project, and where can I find the values? Do I need to sign up for any API to get keys? -->
 
 5. Start the server and client:
 
@@ -61,6 +62,7 @@ This is a simple web application for submitting contact information through a fo
    # Start the client (from the client directory)
    npm start
    ```
+   <!-- Updata command for this app -->
 
 6. Access the application in your web browser at `http://localhost:3000`.
 
